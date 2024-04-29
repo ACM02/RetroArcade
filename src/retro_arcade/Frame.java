@@ -1,3 +1,7 @@
+/*
+ * Frame.java - A class for the window the game will be drawn onto, this controls the game loop as well as which 
+ * piece of the game has access to draw to the panel at any time. 
+ */
 package retro_arcade;
 
 import java.awt.Dimension;
@@ -17,6 +21,7 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private static final int SCREEN_WIDTH = 400;
 	private static final int SCREEN_HEIGHT = 400;
+	private static final String ICON_PATH = "src\\retro_arcade\\images\\arcade-icon.png";
 	
 	private Panel panel;
 	
@@ -41,9 +46,13 @@ public class Frame extends JFrame implements ActionListener {
         timer.start();
 	}
 	
+	/**
+	 * Loads the icon for the game window from the local file system
+	 * @return The icon loaded as a BufferedImage
+	 */
 	private BufferedImage loadIcon() {
 		BufferedImage img = null;
-		File f = new File("src\\retro_arcade\\images\\arcade-icon.png");
+		File f = new File(ICON_PATH);
 		
 		try {
 			img = ImageIO.read(f);
@@ -54,13 +63,19 @@ public class Frame extends JFrame implements ActionListener {
 	}
 
 	
-	// Game loop
+	/**
+	 * The main loop for the game, this is where each frame can be calculated
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		panel.repaint();
 		
 	}
 	
+	/**
+	 * Sets the painter for this frame, could be any of the games or menus
+	 * @param p The painter which will paint the game frame
+	 */
 	public void setPainter(Painter p) {
 		this.panel.setPainter(p);
 	}

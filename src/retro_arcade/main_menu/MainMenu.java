@@ -1,3 +1,6 @@
+/**
+ * The main menu for the game, this is where you can access all of the other games from
+ */
 package retro_arcade.main_menu;
 
 import java.awt.Graphics;

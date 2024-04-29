@@ -1,3 +1,6 @@
+/**
+ * The class that will display a sudoku game onto the game frame
+ */
 package retro_arcade.sudoku;
 
 import java.awt.Graphics;

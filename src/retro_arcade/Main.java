@@ -1,3 +1,6 @@
+/**
+ * Main.java - Main class, runs the program by making a frame
+ */
 package retro_arcade;
 
 import retro_arcade.main_menu.MainMenu;

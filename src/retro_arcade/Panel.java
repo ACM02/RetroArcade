@@ -1,3 +1,6 @@
+/*
+ * The panel we will be painting the game onto
+ */
 package retro_arcade;
 
 import java.awt.Graphics;
