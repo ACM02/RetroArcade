@@ -1,9 +1,12 @@
 package retro_arcade;
 
+import retro_arcade.main_menu.MainMenu;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Frame game = new Frame();
+		@SuppressWarnings("unused")
+		Frame game = new Frame(new MainMenu());
 	}
 
 }
